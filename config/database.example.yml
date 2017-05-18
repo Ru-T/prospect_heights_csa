@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: prospect_heights_csa_development
+
+test:
+  <<: *default
+  database: prospect_heights_csa_test
+
+production:
+  <<: *default
+  database: prospect_heights_csa_production
+  username: prospect_heights_csa
+  password: <%= ENV['prospect_heights_csa_DATABASE_PASSWORD'] %>
