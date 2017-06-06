@@ -17,6 +17,8 @@ gem 'puma'
 gem 'taperole', '~> 2.0'
 # Use active_interaction to manage business logic in a service layer
 # gem 'active_interaction'
+gem 'activeadmin'
+gem 'devise'
 
 group :development, :test do
   # Use cucumber-rails for automated feature tests
