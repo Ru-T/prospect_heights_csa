@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170606194223) do
+ActiveRecord::Schema.define(version: 20170620173048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,6 +70,15 @@ ActiveRecord::Schema.define(version: 20170606194223) do
     t.string   "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "shares", force: :cascade do |t|
+    t.integer  "shareholder_id"
+    t.integer  "share_type_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["share_type_id"], name: "index_shares_on_share_type_id", using: :btree
+    t.index ["shareholder_id"], name: "index_shares_on_shareholder_id", using: :btree
   end
 
 end

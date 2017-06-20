@@ -7,6 +7,9 @@ RSpec.describe Shareholder, type: :model do
   it { is_expected.to validate_presence_of(:phone) }
 
   it { is_expected.to have_one(:address).dependent(:destroy) }
+  it { is_expected.to have_many(:shares) }
+  it { is_expected.to have_many(:share_types).through(:shares) }
+
   it { is_expected.to accept_nested_attributes_for(:address) }
 
   context "when creating a valid shareholder" do
