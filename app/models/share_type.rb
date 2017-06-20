@@ -1,4 +1,4 @@
-class Share < ActiveRecord::Base
+class ShareType < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
 
   enum size: %i(full half)

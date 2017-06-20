@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :shareholders, only: %i(new create)
+  resources :shares, only: %i(new create)
 end

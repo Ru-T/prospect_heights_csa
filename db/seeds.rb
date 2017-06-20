@@ -4,6 +4,6 @@ AdminUser.create!(
   password_confirmation: 'password'
 )
 
-Share.create!(name: "Vegetable")
-Share.create!(name: "Fruit")
-Share.create!(name: "Eggs")
+ShareType.create!(name: "Vegetable")
+ShareType.create!(name: "Fruit")
+ShareType.create!(name: "Eggs")

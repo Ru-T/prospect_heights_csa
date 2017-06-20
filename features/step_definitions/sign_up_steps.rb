@@ -1,6 +1,3 @@
-Given(/^I am not logged into the site$/) do
-end
-
 When(/^I visit the "([^"]*)" page$/) do |page|
   visit page
 end
@@ -27,4 +24,8 @@ end
 
 Then(/^I am presented with a flash message that says "([^"]*)"$/) do |flash|
   expect(page).to have_content(flash)
+end
+
+Then(/^I am redirected to the "([^"]*)" page$/) do |page|
+  visit page
 end
