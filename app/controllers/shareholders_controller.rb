@@ -6,7 +6,7 @@ class ShareholdersController < ApplicationController
   def create
     @shareholder = Shareholder.new(shareholder_params)
     if @shareholder.save
-      redirect_to new_shareholder_path
+      redirect_to new_shareholder_path, notice: 'Account Successfully Created!'
     else
       render :new
     end
