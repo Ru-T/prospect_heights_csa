@@ -30,3 +30,6 @@ config/database.yml
 */.DS_Store
 vendor/ruby
 .tape
+/public/packs
+/public/packs-test
+/node_modules

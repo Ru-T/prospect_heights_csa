@@ -19,6 +19,8 @@ gem 'taperole', '~> 2.0'
 # gem 'active_interaction'
 gem 'activeadmin'
 gem 'devise'
+gem 'webpacker'
+gem 'react-rails'
 
 group :development, :test do
   # Use cucumber-rails for automated feature tests
